@@ -1,0 +1,226 @@
+/* HTML Reset Start */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+  height: 100vh;
+  font-size: 10px;
+}
+
+body {
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1592856908193-b9934576cf3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1501&q=80');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+  user-select: none;
+}
+/* HTML Reset End */
+
+/* Media Queries Start */
+
+@media screen and (min-width: 720px){
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Media Queries End */
+
+/* Header Styling Starts */
+header{
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+
+.primary-header{
+  margin: 0;
+  color: whitesmoke;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 0 black;
+}
+/* Header Styling Ends */
+
+/* Event Space Styling Starts */
+.event-space{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  max-width: 1000px;
+  position: relative;
+}
+
+@media screen and (min-width:720px) {
+  .event-space {
+    flex-direction: row;
+  }
+}
+
+.event-space__setup{
+  /* width: 30vw; */
+  flex: .4;
+  background-color: rgb(245, 245, 245,.5);
+  padding: 2% 4%;
+  border-radius: 16px;
+  margin: 2%;
+}
+
+@media screen and (min-width:720px) {
+  .event-space__setup{
+    width: 30vw;
+  }
+}
+
+.event-space__rules{
+  font-size: 1.2rem;
+}
+
+.setup__difficulty{
+  display: flex;
+  justify-content: space-between;
+}
+
+.setup__adjust-diff{
+  background-color: rgb(245, 245, 245,.5);
+  width: 20%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 16px;
+}
+
+.setup__current-diff::first-letter{
+  text-transform:uppercase;
+}
+
+.difficulty__rules{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rules__balloons{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.rules__balloon-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rules__balloon{
+  width: 100%;
+}
+
+.rules__modifier{
+  margin: 0;
+  color: whitesmoke;
+  text-shadow: 2px 2px black;
+  position: absolute;
+  top: 25%;
+  font-size: 1.2rem;
+}
+
+.setup__start{
+  width: 100%;
+  margin-top: 16px;
+  height: 48px;
+  background-color: rgba(245, 245, 245, 0.5);
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 16px;
+}
+
+/* Event Space Styling Ends */
+
+/* Game Window Styling Starts */
+
+.timer-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 5vh;
+}
+
+.timer-wrapper__timer{
+  height: 100%;
+  background-color: rgb(245, 245, 245,.5);
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2rem;
+  width: 10vw;
+  text-align: center;
+  user-select: none;
+}
+
+.timer-wrapper__timer.--error{
+  background-color: red;
+  color: whitesmoke;
+  transition: all .2s ease-in-out;
+}
+
+.event-space__game-window{
+  flex: .6;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-window{
+  background-color: rgba(245, 245, 245, 0.5);
+  box-shadow: 4px 4px 4px black;
+  height: 100%;
+  width: 100%;
+  cursor:crosshair;
+}
+
+.game-status{
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  background-color: rgba(245, 245, 245, 0.75);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  display: none;
+}
+
+.game-status.--active{
+  display: flex;
+}
+
+.game-status__msg{
+  font-size: 2rem;
+}
+
+.game-status__reset{
+  font-size: 1.5rem;
+
+}
+
+/* Game Window Styling Ends */

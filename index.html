@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Pop Until You Drop🎈</title>
+</head>
+<body>
+  <header>
+    <h1 class="primary-header">
+      Pop Until You Drop🎈
+    </h1>
+  </header>
+  <main class="event-space">
+    <aside class="timer-wrapper">
+      <input 
+        type="datetime" 
+        name="timer" 
+        id="timer" 
+        class="timer-wrapper__timer"
+        value="01:00"
+        disabled
+      >
+    </aside>
+    <section class="event-space__setup">
+      <h2 class="secondary-header">
+        Rules of the Game
+      </h2>
+      <p class="event-space__rules">
+        The goal of the game is to pop all of the balloons that appear in the window in the time allotted. You
+        pop a balloon by clicking on it, the caveat is that to pop certain balloons you must
+        be holding down the corresponding modifier key, pop a balloon with the wrong key and
+        you'll get a penalty!
+      </p>
+      <div class="setup__difficulty">
+        <button class="setup__adjust-diff --decrease" data-type="decrease">-</button>
+        <p class="setup__current-diff">Easy</p>
+        <button class="setup__adjust-diff --increase" data-type="increase">+</button>
+      </div>
+      <section class="difficulty__rules">
+        <p class="rules__msg">Balloon types:</p>
+        <div class="rules__balloons">
+          <div class="rules__balloon-wrapper">
+            <img src="./assets/images/red-balloon.png" alt="red balloon" class="rules__balloon">
+            <p class="rules__modifier">None</p>
+          </div>
+          <div class="rules__balloon-wrapper">
+            <img src="./assets/images/blue-balloon.png" alt="blue balloon" class="rules__balloon">
+            <p class="rules__modifier">Alt</p>
+          </div>
+          <div class="rules__balloon-wrapper">
+            <img src="./assets/images/green-balloon.png" alt="green balloon" class="rules__balloon">
+            <p class="rules__modifier">Shift</p>
+          </div>
+          <div class="rules__balloon-wrapper">
+            <img src="./assets/images/yellow-balloon.png" alt="yellow balloon" class="rules__balloon">
+            <p class="rules__modifier">Ctrl</p>
+          </div>
+        </div>
+      </section>
+      <button class="setup__start">Start Game</button>
+    </section>
+    <section class="event-space__game-window">
+      <canvas class="game-window">
+      </canvas>
+    </section>
+    <aside class="game-status">
+      <h4 class="game-status__msg">Times up! Better luck next time!</h4>
+      <button class="game-status__reset">Reset</button>
+    </aside>
+  </main>
+  <audio src="./assets/audio/pop.mp3"></audio>
+  <script src="./script.js"></script>
+  <script src="./balloon.js"></script>
+</body>
+</html>
